@@ -9,17 +9,15 @@
 ### Spis tresci
 
 1. Instrukcja obsługi
-2. Zaimplementowane rozwiązania.
+2. Zaimplementowane rozwiązania krótka lista.
 2.1 Zaimplementowana rozwiązania w pliku PathFinding.java
 2.2 Zaimplementowana rozwiązania w pliku Main.java
+3. Link do gita, SSH oraz GitHub CLI
 
 
 
 
-
-
-
-1. Instrukcja obsługi:
+### 1. Instrukcja obsługi:
 
 
 Wymagane programy/narzędzia do włączenia programu "Wyszukiwanie najkrotszej sciezki":
@@ -35,15 +33,24 @@ Instrukcja obsługi jak użytkować w dalszej kolejności program został zaimpl
 
 
 
+### 2. Zaimplementowana rozwiązania - krótka lista.
 
-2. Zaimplementowana rozwiązania.
+W programie zostały zaimplementowane różne rozwiązania, zostaną omówione w podpunkcie 2.1 oraz 2.2 dla osobnych plików PathFidning.java oraz Main.java, poniżej znajdziesz krótką liste.
 
-W programie zostały zaimplementowane różne rozwiązania, zostaną omówione w podpunkcie 2.1 oraz 2.2 dla osobnych plików PathFidning.java oraz Main.java
+printInstructions - drukuje szczegółowe instrukcje obsługi programu oraz przykładowe dane wejściowe i wyjściowe.
+Scanner - do wczytywania liczby wierszy i kolumn od użytkownika oraz zamknięcia obiektu na końcu programu.
+InputMismatchException - obsługa wyjątków dla niepoprawnych danych wejściowych.
+grid - Inicjalizacja dwuwymiarowej tablicy o podanych wymiarach.
+findShortestPath - metoda z klasy PathFinding w celu znalezienia najkrótszej ścieżki w tablicy grid.
+Result - przechowuje sumę kosztów ścieżki (sum) oraz listę współrzędnych ścieżki (path)
+dp i paths - tworzenie i inicjalizacja dwuwymiarowych tablic (dp to koszt dojścia, a paths to współrzędne)
 
 
 
 
-2.1 Zaimplementowana rozwiązania w pliku PathFinding.java
+
+
+### 2.1 Zaimplementowana rozwiązania w pliku PathFinding.java
 
 
 PathFinding.java
@@ -135,7 +142,7 @@ Nowy obiekt Result zawierający minSum oraz minPath jest zwracany.
 
 
 
-2.2 Zaimplementowana rozwiązania w pliku Main.java
+### 2.2 Zaimplementowana rozwiązania w pliku Main.java
 
 
 
@@ -206,7 +213,11 @@ catch (InputMismatchException e) łapie wyjątek, gdy wprowadzone dane są niepr
 Instrukcja użytkowania programu oraz przykład uruchomi się do przeczytania, można skorzystać jeszcze przed rozpoczęciem wpisywania danych po naciśnięciu przycisku Run Java.
 
 
+### 3. Link do gita oraz GitHubCLI 
 
-
+Link do Gita: https://github.com/Hokusai97/3.-Wyszukiwanie-najkrotszej-sciezki.git
+GitHub CLI: gh repo clone Hokusai97/3.-Wyszukiwanie-najkrotszej-sciezki
+SSH: git@github.com:Hokusai97/3.-Wyszukiwanie-najkrotszej-sciezki.git
+Moje publiczne konto na git: https://github.com/Hokusai97
 
 

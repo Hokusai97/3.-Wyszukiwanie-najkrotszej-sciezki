@@ -15,11 +15,11 @@ public class Main {
                 System.out.print("Podaj liczbę kolumn: ");
                 cols = scanner.nextInt();
                 if (rows <= 0 || cols <= 0) {
-                    throw new InputMismatchException("Elementy tablicy muszą być dodatnimi liczbami całkowitymi.");
+                    throw new InputMismatchException("Elementy tablicy muszą być dodatnimi liczbami.");
                 }
                 break;
             } catch (InputMismatchException e) {
-                System.out.println("Proszę wprowadzać wyłącznie dodatnie liczby całkowite.");
+                System.out.println("Proszę wprowadzać wyłącznie dodatnie liczby.");
                 scanner.next(); 
             }
         }
