@@ -12,13 +12,12 @@ public class PathFinding {
         }
     }
 
-    // Funkcja do znajdowania najkrótszej ścieżki
     public static Result findShortestPath(int[][] grid, int rows, int cols) {
         int[][] dp = new int[rows][cols];
         int[][] directions = {{-1, -1}, {-1, 0}, {-1, 1}, {0, -1}, {0, 1}, {1, -1}, {1, 0}, {1, 1}};
         List<int[]>[][] paths = new ArrayList[rows][cols];
 
-        // Inicjalizacja
+
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
                 dp[i][j] = Integer.MAX_VALUE;
@@ -26,13 +25,11 @@ public class PathFinding {
             }
         }
 
-        // Wypełnienie dp dla pierwszej kolumny
         for (int i = 0; i < rows; i++) {
             dp[i][0] = grid[i][0];
             paths[i][0].add(new int[]{i, 0});
         }
 
-        // Dynamiczne programowanie
         for (int j = 1; j < cols; j++) {
             for (int i = 0; i < rows; i++) {
                 for (int[] dir : directions) {
@@ -53,7 +50,6 @@ public class PathFinding {
             }
         }
 
-        // Znalezienie minimalnej sumy w ostatniej kolumnie
         int minSum = Integer.MAX_VALUE;
         List<int[]> minPath = new ArrayList<>();
 
