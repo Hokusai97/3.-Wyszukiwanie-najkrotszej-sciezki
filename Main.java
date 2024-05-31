@@ -8,7 +8,6 @@ public class Main {
         
         int rows = 0, cols = 0;
 
-        // Wprowadzenie wymiarów tablicy z walidacją
         while (true) {
             try {
                 System.out.print("Podaj liczbę wierszy: ");
@@ -21,13 +20,12 @@ public class Main {
                 break;
             } catch (InputMismatchException e) {
                 System.out.println("Proszę wprowadzać wyłącznie dodatnie liczby całkowite.");
-                scanner.next(); // Oczyść bufor
+                scanner.next(); 
             }
         }
         
         int[][] grid = new int[rows][cols];
 
-        // Wprowadzenie elementów tablicy z walidacją
         System.out.println("Podaj elementy tablicy:");
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
@@ -40,16 +38,14 @@ public class Main {
                         break;
                     } catch (InputMismatchException e) {
                         System.out.println("Proszę wprowadzać wyłącznie dodatnie liczby całkowite.");
-                        scanner.next(); // Oczyść bufor
+                        scanner.next(); 
                     }
                 }
             }
         }
         
-        // Znalezienie najkrótszej ścieżki
         PathFinding.Result result = PathFinding.findShortestPath(grid, rows, cols);
         
-        // Wynik
         System.out.println("Podążając najkrótszą ściężką, minimalna suma wynosi: " + result.sum);
         System.out.print("Sekwencja poruszania się wygląda następująco: ");
         for (int i = 0; i < result.path.size(); i++) {
